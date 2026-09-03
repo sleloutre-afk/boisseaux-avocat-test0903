@@ -1,0 +1,54 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Lato:wght@300;400;700&display=swap');
+
+@theme {
+  --color-fonce: #1e1c2e;
+  --color-fonce-dark: #111020;
+  --color-accent: #7a6a9a;
+  --color-accent-light: #9080b8;
+  --color-accent-dark: #5a4a7a;
+  --color-fond: #f5f4f8;
+  --color-creme: #ebe8f2;
+  --color-muted: #6a6080;
+  --color-divider: #ccc8da;
+
+  --font-playfair: 'Playfair Display', Georgia, serif;
+  --font-lato: 'Lato', 'Helvetica Neue', sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background-color: var(--color-fond);
+  color: var(--color-fonce);
+  font-family: var(--font-lato);
+  margin: 0;
+}
+
+/* Ken Burns hero */
+@keyframes kenburns {
+  0%   { transform: scale(1)    translateX(0)    translateY(0); }
+  50%  { transform: scale(1.06) translateX(-1%)  translateY(-0.5%); }
+  100% { transform: scale(1)    translateX(0)    translateY(0); }
+}
+.hero-img {
+  animation: kenburns 18s ease-in-out infinite;
+  will-change: transform;
+}
+
+/* Cabinet grid — responsive */
+@media (max-width: 767px) {
+  .cabinet-grid { grid-template-columns: 1fr !important; gap: 3rem !important; }
+}
+
+/* Article body typography */
+.article-body h2 {
+  font-family: var(--font-playfair), Georgia, serif;
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: #1e1c2e;
+  margin: 40px 0 16px;
+}
+.article-body p { margin: 0 0 20px; }
