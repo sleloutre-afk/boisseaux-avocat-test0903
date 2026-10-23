@@ -10,11 +10,11 @@ export default function Ressources() {
   return (
     <>
       <Navbar />
-      <main style={{ background: '#f5f4f8', minHeight: '100vh' }}>
-        <div style={{ background: '#1e1c2e', padding: '120px 24px 64px' }}>
+      <main style={{ background: '#f6f3ee', minHeight: '100vh' }}>
+        <div style={{ background: '#1a2233', padding: '120px 24px 64px' }}>
           <div className="max-w-4xl mx-auto">
-            <p style={{ fontFamily: 'var(--font-lato)', fontSize: '0.72rem', letterSpacing: '0.28em', textTransform: 'uppercase', color: '#7a6a9a', marginBottom: '16px' }}>Ressources</p>
-            <h1 style={{ fontFamily: 'var(--font-playfair)', fontSize: 'clamp(1.8rem, 4vw, 2.8rem)', color: '#f5f4f8', fontWeight: 400, margin: 0 }}>
+            <p style={{ fontFamily: 'var(--font-lato)', fontSize: '0.72rem', letterSpacing: '0.28em', textTransform: 'uppercase', color: '#b08d57', marginBottom: '16px' }}>Ressources</p>
+            <h1 style={{ fontFamily: 'var(--font-playfair)', fontSize: 'clamp(1.8rem, 4vw, 2.8rem)', color: '#f6f3ee', fontWeight: 400, margin: 0 }}>
               Articles & Analyses juridiques
             </h1>
           </div>
@@ -25,15 +25,15 @@ export default function Ressources() {
               <Link key={a.slug} href={`/ressources/${a.slug}`} style={{ textDecoration: 'none', display: 'block' }}>
                 <article
                   style={{ background: '#fff', padding: '36px 40px', borderLeft: '3px solid transparent', transition: 'border-color 0.2s' }}
-                  onMouseEnter={e => ((e.currentTarget as HTMLElement).style.borderLeftColor = '#7a6a9a')}
+                  onMouseEnter={e => ((e.currentTarget as HTMLElement).style.borderLeftColor = '#b08d57')}
                   onMouseLeave={e => ((e.currentTarget as HTMLElement).style.borderLeftColor = 'transparent')}
                 >
                   <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '8px', marginBottom: '14px' }}>
-                    <span style={{ fontFamily: 'var(--font-lato)', fontSize: '0.68rem', letterSpacing: '0.16em', textTransform: 'uppercase', color: '#7a6a9a' }}>{a.categorie}</span>
-                    <span style={{ fontFamily: 'var(--font-lato)', fontSize: '0.75rem', color: '#6a6080' }}>{new Date(a.date).toLocaleDateString('fr-FR', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
+                    <span style={{ fontFamily: 'var(--font-lato)', fontSize: '0.68rem', letterSpacing: '0.16em', textTransform: 'uppercase', color: '#8a6c3e' }}>{a.categorie}</span>
+                    <span style={{ fontFamily: 'var(--font-lato)', fontSize: '0.75rem', color: '#6b6f78' }}>{new Date(a.date).toLocaleDateString('fr-FR', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
                   </div>
-                  <h2 style={{ fontFamily: 'var(--font-playfair)', fontSize: '1.2rem', color: '#1e1c2e', fontWeight: 400, lineHeight: 1.38, marginBottom: '12px' }}>{a.titre}</h2>
-                  <p style={{ fontFamily: 'var(--font-lato)', fontSize: '0.9rem', color: '#6a6080', lineHeight: 1.65, margin: 0 }}>{a.resume}</p>
+                  <h2 style={{ fontFamily: 'var(--font-playfair)', fontSize: '1.2rem', color: '#1a2233', fontWeight: 400, lineHeight: 1.38, marginBottom: '12px' }}>{a.titre}</h2>
+                  <p style={{ fontFamily: 'var(--font-lato)', fontSize: '0.9rem', color: '#6b6f78', lineHeight: 1.65, margin: 0 }}>{a.resume}</p>
                 </article>
               </Link>
             ))}

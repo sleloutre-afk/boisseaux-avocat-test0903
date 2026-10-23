@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react'
 
-export function MonogramMB({ color = '#7a6a9a', size = 64 }: { color?: string; size?: number }) {
+export function MonogramMB({ color = '#b08d57', size = 64 }: { color?: string; size?: number }) {
   const r = size / 2
   const stroke = size * 0.025
   const fsMain = size * 0.210
@@ -42,42 +42,42 @@ export default function Navbar() {
     <header
       className="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
       style={{
-        background: scrolled ? 'rgba(30,28,46,0.97)' : 'transparent',
+        background: scrolled ? 'rgba(26,34,51,0.97)' : 'transparent',
         backdropFilter: scrolled ? 'blur(8px)' : 'none',
-        boxShadow: scrolled ? '0 1px 0 rgba(122,106,154,0.18)' : 'none',
+        boxShadow: scrolled ? '0 1px 0 rgba(176,141,87,0.18)' : 'none',
       }}
     >
       <div className="max-w-6xl mx-auto px-6 flex items-center justify-between" style={{ height: '72px' }}>
         <a href="#" className="flex items-center gap-3" aria-label="Cabinet Marie Boisseaux Avocat">
-          <MonogramMB size={44} color="#7a6a9a" />
-          <span style={{ fontFamily: 'var(--font-playfair)', color: '#f5f4f8', fontSize: '1rem', letterSpacing: '0.08em', lineHeight: 1.2 }}>
-            Marie <span style={{ color: '#7a6a9a' }}>Boisseaux</span>
-            <span style={{ display: 'block', fontFamily: 'var(--font-lato)', fontSize: '0.65rem', letterSpacing: '0.14em', textTransform: 'uppercase', color: '#6a6080', fontWeight: 400, marginTop: '2px' }}>Avocate au Barreau de Bordeaux</span>
+          <MonogramMB size={44} color="#b08d57" />
+          <span style={{ fontFamily: 'var(--font-playfair)', color: '#f6f3ee', fontSize: '1rem', letterSpacing: '0.08em', lineHeight: 1.2 }}>
+            Marie <span style={{ color: '#b08d57' }}>Boisseaux</span>
+            <span style={{ display: 'block', fontFamily: 'var(--font-lato)', fontSize: '0.65rem', letterSpacing: '0.14em', textTransform: 'uppercase', color: '#6b6f78', fontWeight: 400, marginTop: '2px' }}>Avocate au Barreau de Bordeaux</span>
           </span>
         </a>
 
         <nav className="hidden md:flex items-center gap-8">
           {links.map(l => (
             <a key={l.href} href={l.href}
-              style={{ color: '#ccc8da', fontFamily: 'var(--font-lato)', fontSize: '0.8rem', letterSpacing: '0.12em', textTransform: 'uppercase', textDecoration: 'none', transition: 'color 0.2s' }}
-              onMouseEnter={e => (e.currentTarget.style.color = '#9080b8')}
-              onMouseLeave={e => (e.currentTarget.style.color = '#ccc8da')}
+              style={{ color: '#d4cdc0', fontFamily: 'var(--font-lato)', fontSize: '0.8rem', letterSpacing: '0.12em', textTransform: 'uppercase', textDecoration: 'none', transition: 'color 0.2s' }}
+              onMouseEnter={e => (e.currentTarget.style.color = '#c9a872')}
+              onMouseLeave={e => (e.currentTarget.style.color = '#d4cdc0')}
             >{l.label}</a>
           ))}
         </nav>
 
         <button className="flex md:hidden flex-col justify-center items-center gap-1.5 w-8 h-8" onClick={() => setOpen(!open)} aria-label="Menu">
-          <span style={{ display: 'block', width: '22px', height: '1.5px', background: '#7a6a9a', transition: 'transform 0.2s', transform: open ? 'rotate(45deg) translate(3px,3px)' : 'none' }} />
-          <span style={{ display: 'block', width: '22px', height: '1.5px', background: '#7a6a9a', opacity: open ? 0 : 1, transition: 'opacity 0.2s' }} />
-          <span style={{ display: 'block', width: '22px', height: '1.5px', background: '#7a6a9a', transition: 'transform 0.2s', transform: open ? 'rotate(-45deg) translate(3px,-3px)' : 'none' }} />
+          <span style={{ display: 'block', width: '22px', height: '1.5px', background: '#b08d57', transition: 'transform 0.2s', transform: open ? 'rotate(45deg) translate(3px,3px)' : 'none' }} />
+          <span style={{ display: 'block', width: '22px', height: '1.5px', background: '#b08d57', opacity: open ? 0 : 1, transition: 'opacity 0.2s' }} />
+          <span style={{ display: 'block', width: '22px', height: '1.5px', background: '#b08d57', transition: 'transform 0.2s', transform: open ? 'rotate(-45deg) translate(3px,-3px)' : 'none' }} />
         </button>
       </div>
 
       {open && (
-        <div style={{ background: 'rgba(17,16,32,0.98)', borderTop: '1px solid rgba(122,106,154,0.2)' }} className="md:hidden">
+        <div style={{ background: 'rgba(15,21,32,0.98)', borderTop: '1px solid rgba(176,141,87,0.2)' }} className="md:hidden">
           {links.map(l => (
             <a key={l.href} href={l.href} onClick={() => setOpen(false)}
-              style={{ display: 'block', padding: '14px 24px', color: '#ccc8da', fontFamily: 'var(--font-lato)', fontSize: '0.8rem', letterSpacing: '0.12em', textTransform: 'uppercase', textDecoration: 'none', borderBottom: '1px solid rgba(122,106,154,0.1)' }}
+              style={{ display: 'block', padding: '14px 24px', color: '#d4cdc0', fontFamily: 'var(--font-lato)', fontSize: '0.8rem', letterSpacing: '0.12em', textTransform: 'uppercase', textDecoration: 'none', borderBottom: '1px solid rgba(176,141,87,0.1)' }}
             >{l.label}</a>
           ))}
         </div>

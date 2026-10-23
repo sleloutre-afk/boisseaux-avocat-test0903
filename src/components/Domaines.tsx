@@ -1,7 +1,5 @@
 'use client'
 
-import Image from 'next/image'
-
 const domaines = [
   {
     titre: 'Droit pénal',
@@ -27,24 +25,24 @@ const domaines = [
 
 export default function Domaines() {
   return (
-    <section id="domaines" style={{ background: '#ebe8f2', padding: '96px 24px' }}>
+    <section id="domaines" style={{ background: '#ece6dc', padding: '96px 24px' }}>
       <div className="max-w-6xl mx-auto">
         <div style={{ textAlign: 'center', marginBottom: '64px' }}>
-          <p style={{ fontFamily: 'var(--font-lato)', fontSize: '0.72rem', letterSpacing: '0.28em', textTransform: 'uppercase', color: '#7a6a9a', marginBottom: '12px' }}>Domaines d'intervention</p>
-          <h2 style={{ fontFamily: 'var(--font-playfair)', fontSize: 'clamp(1.6rem, 3vw, 2.4rem)', color: '#1e1c2e', fontWeight: 400, margin: 0 }}>
+          <p style={{ fontFamily: 'var(--font-lato)', fontSize: '0.72rem', letterSpacing: '0.28em', textTransform: 'uppercase', color: '#8a6c3e', marginBottom: '12px' }}>Domaines d'intervention</p>
+          <h2 style={{ fontFamily: 'var(--font-playfair)', fontSize: 'clamp(1.6rem, 3vw, 2.4rem)', color: '#1a2233', fontWeight: 400, margin: 0 }}>
             Un accompagnement global
           </h2>
         </div>
 
         <div className="grid md:grid-cols-2 gap-8">
           {domaines.map((d, i) => (
-            <div key={i} style={{ background: '#f5f4f8', padding: '40px 36px', borderTop: '3px solid #7a6a9a' }}>
+            <div key={i} style={{ background: '#f6f3ee', padding: '40px 36px', borderTop: '3px solid #b08d57' }}>
               <div style={{ marginBottom: '20px' }}>
-                <Image src={d.svg} alt="" width={40} height={40}
-                  style={{ filter: 'brightness(0) saturate(100%) invert(44%) sepia(15%) saturate(800%) hue-rotate(230deg) brightness(90%)' }} />
+                <div aria-hidden="true"
+                  style={{ width: '40px', height: '40px', background: '#b08d57', WebkitMask: `url(${d.svg}) center / contain no-repeat`, mask: `url(${d.svg}) center / contain no-repeat` }} />
               </div>
-              <h3 style={{ fontFamily: 'var(--font-playfair)', fontSize: '1.2rem', color: '#1e1c2e', fontWeight: 400, marginBottom: '16px' }}>{d.titre}</h3>
-              <p style={{ fontFamily: 'var(--font-lato)', color: '#6a6080', lineHeight: 1.75, margin: 0, fontSize: '0.92rem' }}>{d.texte}</p>
+              <h3 style={{ fontFamily: 'var(--font-playfair)', fontSize: '1.2rem', color: '#1a2233', fontWeight: 400, marginBottom: '16px' }}>{d.titre}</h3>
+              <p style={{ fontFamily: 'var(--font-lato)', color: '#6b6f78', lineHeight: 1.75, margin: 0, fontSize: '0.92rem' }}>{d.texte}</p>
             </div>
           ))}
         </div>
